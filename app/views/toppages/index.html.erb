@@ -1,5 +1,12 @@
 <% if logged_in? %>
-  <%= render 'tasks/index' %>
+  <div class="row">
+    <aside class="col-md-4">
+      <%= render 'tasks/form', task: @task %>
+    </aside>
+    <div class="col-xs-8">
+      <%= render 'tasks/tasks' %>
+    </div>
+  </div>
   
 <% else %>
 <div class="center jumbotron">
