@@ -16,7 +16,7 @@ Rails.application.routes.draw do
   get 'toppages/index'
 
   root to: 'toppages#index'
-  resources :tasks
+  resources :tasks, only: [:new, :create, :edit, :update, :destroy]
   
   get 'login', to: 'sessions#new'
   post 'login', to: 'sessions#create'
